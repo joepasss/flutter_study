@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/categories_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,23 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('DeliMeals'),
-      ),
-      body: const Center(
-        child: Text('MEALSAPP'),
-      ),
+      home: const CategoriesScreen(),
     );
   }
 }
