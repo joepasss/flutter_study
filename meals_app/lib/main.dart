@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import './screens/screens.dart';
@@ -39,6 +40,16 @@ class MyApp extends StatelessWidget {
         '/': (context) => const CategoriesScreen(),
         CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
         MealDetailScreen.routeName: (context) => const MealDetailScreen(),
+      },
+      // onGenerateRoute: (settings) {    // error page
+      //   if (kDebugMode) {
+      //     print(settings.arguments);
+      //   }
+      //   return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
+      // },
+      onUnknownRoute: (settings) {
+        // 404 page
+        return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
       },
     );
   }
